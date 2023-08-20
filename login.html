@@ -1,0 +1,64 @@
+<html>
+   <head>
+      <title>login credentials</title>
+      <style>
+         body{
+         background-image: url("https://png.pngtree.com/thumb_back/fh260/background/20200530/pngtree-cute-hand-drawn-style-mathematics-education-pink-background-image_337359.jpg");
+         background-position: center center;
+         background-repeat: no-repeat;
+         background-attachment: fixed;
+         background-size: cover;
+         font-size:20px;
+         }
+      </style>
+      <script>
+         function validateForm()
+         {
+         var email = document.forms["RegForm"]["EMail"];
+         var password = document.forms["RegForm"]["Password"];
+         if (!/^[0-9A-Za-z_.]+@[a-z]+.[a-z]{2,3}$/i.test(email.value))
+         {
+         window.alert("Please enter a valid e-mail address.");
+         email.focus();
+         return false;
+         }
+         if (password.value == "")
+         {
+         window.alert("Please enter your password");
+         password.focus();
+         return false;
+         }
+         if(email.value=="ramyasrimantripragada@gmail.com" && password.value=="ramyasri"){
+         return true;}
+         else
+         {
+         window.alert("Credentials do not match");
+         return false;
+         }
+         
+         }
+      </script>
+   </head>
+   <body>
+      <br><br><br>
+      <center>
+         <h1>LOGIN PAGE</h1>
+         <table>
+            <form name="RegForm" action="main.html" target="_parent" onsubmit="return validateForm()" method="post">
+               <tr>
+                  <td>Email ID:</td>
+                  <td><input type="email" name="EMail"></td>
+               </tr>
+               <tr>
+                  <td>Password:</td>
+                  <td><input type="password" name="Password"></td>
+               </tr>
+               <tr>
+                  <td><input type="SUBMIT" value="SUBMIT" name="Submit"></td>
+                  <td><input type="RESET" value="RESET" name="Reset"></td>
+               </tr>
+            </form>
+         </table>
+      </center>
+   </body>
+</html>
